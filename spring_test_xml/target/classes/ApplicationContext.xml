@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans 
-	http://www.springframework.org/schema/beans/spring-beans.xsd">
+<beans xmlns="http://www.springframework.org/schema/beans" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+ xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd ">
+	
+	<context:annotation-config/>
+	<context:property-placeholder location="app.properties"/>
+	
 
 	<bean name="customerRepository" 
-	      class="com.nimisha.repository.HibernateCustomerRepositoryImpl" />
+	      class="com.nimisha.repository.HibernateCustomerRepositoryImpl" >
+	     
+	      </bean>
 
 	<bean name="customerService" 
 		  class="com.nimisha.service.CustomerServiceImpl" 
